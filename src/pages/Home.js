@@ -2,7 +2,8 @@ import React from 'react';
 
 const Home = () => {
   const generateError = () => {
-    console.log(hello);
+    throw Error("This is an error");
+    //console.log(hello);
   };
 
   return (

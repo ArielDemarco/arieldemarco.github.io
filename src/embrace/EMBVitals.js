@@ -1,3 +1,8 @@
+function EMBReportVitals(vitals) {
+  const parsedVitals = JSON.parse(JSON.stringify(vitals));
+  window.webkit.messageHandlers.embraceWebVitals.postMessage(parsedVitals);
+}
+
 const embraceGetVitals = () => {
   if (typeof EMBReportVitals == "function"
     && EMBReportVitals instanceof Function) {
